@@ -1,0 +1,50 @@
+{
+  "id": "sinless-foundry-system",
+  "title": "Sinless",
+  "description": "A Foundry VTT system module for the game Sinless.",
+  "authors": [
+    {
+      "name": "CommanderTso"
+    }
+  ],
+  "url": "https://github.com/CommanderTso/sinless-foundry-system",
+  "license": "LICENSE.txt",
+  "readme": "README.md",
+  "bugs": "https://github.com/CommanderTso/sinless-foundry-system/issues",
+  "changelog": "CHANGELOG.md",
+  "media": [
+    {
+      "type": "setup",
+      "url": "systems/sinless-foundry-system/assets/anvil-impact.png",
+      "thumbnail": "systems/sinless-foundry-system/assets/anvil-impact.png"
+    }
+  ],
+  "version": "2.0.0",
+  "compatibility": {
+    "minimum": 11,
+    "verified": "11.315"
+  },
+  "esmodules": [
+    "module/sinless-foundry-system.mjs"
+  ],
+  "styles": [
+    "css/sinless-foundry-system.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "packs": [],
+  "packFolders": [],
+  "socket": false,
+  "manifest": "Replace this with a link to the /latest release system.json so people can receive updates after they've installed the system",
+  "download": "This must link to a .zip file of the current version",
+  "background": "systems/sinless-foundry-system/assets/anvil-impact.png",
+  "gridDistance": 5,
+  "gridUnits": "ft",
+  "primaryTokenAttribute": "health",
+  "secondaryTokenAttribute": "power"
+}
