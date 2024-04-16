@@ -15,8 +15,8 @@
   "media": [
     {
       "type": "setup",
-      "url": "systems/sinless-foundry-system/assets/anvil-impact.png",
-      "thumbnail": "systems/sinless-foundry-system/assets/anvil-impact.png"
+      "url": "systems/sinless-foundry-system/assets/sinless.png",
+      "thumbnail": "systems/sinless-foundry-system/assets/sinless.png"
     }
   ],
   "version": "0.1.0",
