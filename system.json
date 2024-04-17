@@ -45,6 +45,6 @@
   "background": "systems/sinless-foundry-system/assets/anvil-impact.png",
   "gridDistance": 2,
   "gridUnits": "m",
-  "primaryTokenAttribute": null,
-  "secondaryTokenAttribute": null
+  "primaryTokenAttribute": "physicalCondition",
+  "secondaryTokenAttribute": "stunCondition"
 }

@@ -5,11 +5,11 @@ export default class SinlessActorBase extends foundry.abstract.TypeDataModel {
     const requiredInteger = { required: true, nullable: false, integer: true };
     const schema = {};
 
-    schema.health = new fields.SchemaField({
+    schema.physicalCondition = new fields.SchemaField({
       value: new fields.NumberField({ ...requiredInteger, initial: 10, min: 0 }),
       max: new fields.NumberField({ ...requiredInteger, initial: 10 })
     });
-    schema.power = new fields.SchemaField({
+    schema.stunCondition = new fields.SchemaField({
       value: new fields.NumberField({ ...requiredInteger, initial: 5, min: 0 }),
       max: new fields.NumberField({ ...requiredInteger, initial: 5 })
     });
