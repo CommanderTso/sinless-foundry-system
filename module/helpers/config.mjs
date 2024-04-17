@@ -6,18 +6,18 @@ export const SINLESS = {};
  */
 SINLESS.abilities = {
   str: 'SINLESS.Ability.Str.long',
-  dex: 'SINLESS.Ability.Dex.long',
-  con: 'SINLESS.Ability.Con.long',
+  bod: 'SINLESS.Ability.Bod.long',
+  rct: 'SINLESS.Ability.Rct.long',
   int: 'SINLESS.Ability.Int.long',
-  wis: 'SINLESS.Ability.Wis.long',
+  wlp: 'SINLESS.Ability.Wlp.long',
   cha: 'SINLESS.Ability.Cha.long',
 };
 
 SINLESS.abilityAbbreviations = {
   str: 'SINLESS.Ability.Str.abbr',
-  dex: 'SINLESS.Ability.Dex.abbr',
-  con: 'SINLESS.Ability.Con.abbr',
+  bod: 'SINLESS.Ability.Bod.abbr',
+  rct: 'SINLESS.Ability.Rct.abbr',
   int: 'SINLESS.Ability.Int.abbr',
-  wis: 'SINLESS.Ability.Wis.abbr',
+  wlp: 'SINLESS.Ability.Wlp.abbr',
   cha: 'SINLESS.Ability.Cha.abbr',
 };

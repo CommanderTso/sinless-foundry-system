@@ -2,10 +2,10 @@
   "SINLESS": {
     "Ability": {
       "Str": { "long": "Strength", "abbr": "str" },
-      "Con": { "long": "Constitution", "abbr": "con" },
-      "Dex": { "long": "Dexterity", "abbr": "dex" },
+      "Bod": { "long": "Body", "abbr": "bod" },
+      "Rct": { "long": "Reaction", "abbr": "rct" },
       "Int": { "long": "Intelligence", "abbr": "int" },
-      "Wis": { "long": "Wisdom", "abbr": "wis" },
+      "Wlp": { "long": "Willpower", "abbr": "wlp" },
       "Cha": { "long": "Charisma", "abbr": "cha" }
     },
     "SheetLabels": {
