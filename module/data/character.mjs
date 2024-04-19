@@ -7,15 +7,15 @@ export default class SinlessCharacter extends SinlessActorBase {
     const requiredInteger = { required: true, nullable: false, integer: true };
     const schema = super.defineSchema();
 
-    schema.attributes = new fields.SchemaField({
-      level: new fields.SchemaField({
-        value: new fields.NumberField({ ...requiredInteger, initial: 1 })
-      }),
-    });
+    // schema.attributes = new fields.SchemaField({
+    //   level: new fields.SchemaField({
+    //     value: new fields.NumberField({ ...requiredInteger, initial: 1 })
+    //   }),
+    // });
 
     // Iterate over ability names and create a new SchemaField for each.
-    schema.abilities = new fields.SchemaField(Object.keys(CONFIG.SINLESS.abilities).reduce((obj, ability) => {
-      obj[ability] = new fields.SchemaField({
+    schema.attributes = new fields.SchemaField(Object.keys(CONFIG.SINLESS.attributes).reduce((obj, attribute) => {
+      obj[attribute] = new fields.SchemaField({
         value: new fields.NumberField({ ...requiredInteger, initial: 10, min: 0 }),
         mod: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
         label: new fields.StringField({ required: true, blank: true })
@@ -37,18 +37,18 @@ export default class SinlessCharacter extends SinlessActorBase {
   }
 
   getRollData() {
-    const data = {};
+  //   const data = {};
 
-    // Copy the ability scores to the top level, so that rolls can use
-    // formulas like `@str.mod + 4`.
-    if (this.abilities) {
-      for (let [k,v] of Object.entries(this.abilities)) {
-        data[k] = foundry.utils.deepClone(v);
-      }
-    }
+  //   // Copy the ability scores to the top level, so that rolls can use
+  //   // formulas like `@str.mod + 4`.
+  //   if (this.abilities) {
+  //     for (let [k,v] of Object.entries(this.abilities)) {
+  //       data[k] = foundry.utils.deepClone(v);
+  //     }
+  //   }
 
-    data.lvl = this.attributes.level.value;
+  //   data.lvl = this.attributes.level.value;
 
-    return data
+  //   return data
   }
 }

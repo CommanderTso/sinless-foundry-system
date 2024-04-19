@@ -1,12 +1,24 @@
 {
   "SINLESS": {
     "Ability": {
-      "Str": { "long": "Strength", "abbr": "str" },
-      "Con": { "long": "Constitution", "abbr": "con" },
-      "Dex": { "long": "Dexterity", "abbr": "dex" },
-      "Int": { "long": "Intelligence", "abbr": "int" },
-      "Wis": { "long": "Wisdom", "abbr": "wis" },
-      "Cha": { "long": "Charisma", "abbr": "cha" }
+      "Str": {
+        "long": "Strength"
+      },
+      "Body": {
+        "long": "Body"
+      },
+      "Reaction": {
+        "long": "Reaction"
+      },
+      "Intelligence": {
+        "long": "Intelligence"
+      },
+      "Willpower": {
+        "long": "Willpower"
+      },
+      "Charisma": {
+        "long": "Charisma"
+      }
     },
     "SheetLabels": {
       "Actor": "Sinless Actor Sheet",
@@ -26,7 +38,6 @@
       "Inactive": "Inactive Effects"
     }
   },
-
   "TYPES": {
     "Actor": {
       "character": "Character",
