@@ -14,20 +14,20 @@
         and it will add a small amount of padding, a border, and will
         center all of its child elements content and text. --}}
         <div class="resource flex-group-center">
-          <label for="system.health.value" class="resource-label">Health</label>
+          <label for="system.physicalCondition.value" class="resource-label">Phys Condition</label>
           <div class="resource-content flexrow flex-center flex-between">
-          <input type="text" name="system.health.value" value="{{system.health.value}}" data-dtype="Number"/>
+          <input type="text" name="system.physicalCondition.value" value="{{system.physicalCondition.value}}" data-dtype="Number"/>
           <span> / </span>
-          <input type="text" name="system.health.max" value="{{system.health.max}}" data-dtype="Number"/>
+          <input type="text" name="system.physicalCondition.max" value="{{system.physicalCondition.max}}" data-dtype="Number"/>
           </div>
         </div>
 
         <div class="resource flex-group-center">
-          <label for="system.power.value" class="resource-label">Power</label>
+          <label for="system.stunCondition.value" class="resource-label">Stun Condition</label>
           <div class="resource-content flexrow flex-center flex-between">
-          <input type="text" name="system.power.value" value="{{system.power.value}}" data-dtype="Number"/>
+          <input type="text" name="system.stunCondition.value" value="{{system.stunCondition.value}}" data-dtype="Number"/>
           <span> / </span>
-          <input type="text" name="system.power.max" value="{{system.power.max}}" data-dtype="Number"/>
+          <input type="text" name="system.stunCondition.max" value="{{system.stunCondition.max}}" data-dtype="Number"/>
           </div>
         </div>
 
@@ -63,12 +63,13 @@
           {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
           use both the "grid" and "grid-Ncol" class where "N" can be any number
           from 1 to 12 and will create that number of columns.  --}}
+          {{log this}}
           <div class="abilities flexcol">
-            {{#each system.abilities as |ability key|}}
+            {{#each system.attributes as |attribute key|}}
             <div class="ability flexrow flex-group-center">
-              <label for="system.abilities.{{key}}.value" class="resource-label rollable flexlarge align-left" data-roll="d20+@abilities.{{key}}.mod" data-label="{{ability.label}}">{{ability.label}}</label>
-              <input type="text" name="system.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number"/>
-              <span class="ability-mod rollable" data-roll="d20+@abilities.{{key}}.mod" data-label="{{ability.label}}">{{numberFormat ability.mod decimals=0 sign=true}}</span>
+              <label for="system.attributes.{{key}}.value" class="resource-label rollable flexlarge align-left" data-roll="d20+@attributes.{{key}}.mod" data-label="{{attribute.label}}">{{attribute.label}}</label>
+              <input type="text" name="system.attributes.{{key}}.value" value="{{attribute.value}}" data-dtype="Number"/>
+              <span class="ability-mod rollable" data-roll="d20+@attributes.{{key}}.mod" data-label="{{attribute.label}}">{{numberFormat attribute.mod decimals=0 sign=true}}</span>
             </div>
             {{/each}}
           </div>

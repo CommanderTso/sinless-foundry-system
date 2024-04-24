@@ -1,7 +1,7 @@
 {
   "SINLESS": {
-    "Ability": {
-      "Str": {
+    "Attributes": {
+      "Strength": {
         "long": "Strength"
       },
       "Body": {

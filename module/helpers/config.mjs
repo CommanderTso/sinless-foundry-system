@@ -5,11 +5,11 @@ export const SINLESS = {};
  * @type {Object}
  */
 SINLESS.attributes = {
-  strength: 'SINLESS.Ability.Strength.long',
-  body: 'SINLESS.Ability.Body.long',
-  reaction: 'SINLESS.Ability.Reaction.long',
-  intelligence: 'SINLESS.Ability.Intelligence.long',
-  willpower: 'SINLESS.Ability.Willpower.long',
-  charisma: 'SINLESS.Ability.Charisma.long',
+  strength: 'SINLESS.Attributes.Strength.long',
+  body: 'SINLESS.Attributes.Body.long',
+  reaction: 'SINLESS.Attributes.Reaction.long',
+  intelligence: 'SINLESS.Attributes.Intelligence.long',
+  willpower: 'SINLESS.Attributes.Willpower.long',
+  charisma: 'SINLESS.Attributes.Charisma.long',
 };
 
