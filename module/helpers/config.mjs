@@ -1,23 +1,15 @@
 export const SINLESS = {};
 
 /**
- * The set of Ability Scores used within the system.
+ * The set of attributes used within the system.
  * @type {Object}
  */
-SINLESS.abilities = {
-  str: 'SINLESS.Ability.Str.long',
-  dex: 'SINLESS.Ability.Dex.long',
-  con: 'SINLESS.Ability.Con.long',
-  int: 'SINLESS.Ability.Int.long',
-  wis: 'SINLESS.Ability.Wis.long',
-  cha: 'SINLESS.Ability.Cha.long',
+SINLESS.attributes = {
+  strength: 'SINLESS.Attributes.Strength.long',
+  body: 'SINLESS.Attributes.Body.long',
+  reaction: 'SINLESS.Attributes.Reaction.long',
+  intelligence: 'SINLESS.Attributes.Intelligence.long',
+  willpower: 'SINLESS.Attributes.Willpower.long',
+  charisma: 'SINLESS.Attributes.Charisma.long',
 };
 
-SINLESS.abilityAbbreviations = {
-  str: 'SINLESS.Ability.Str.abbr',
-  dex: 'SINLESS.Ability.Dex.abbr',
-  con: 'SINLESS.Ability.Con.abbr',
-  int: 'SINLESS.Ability.Int.abbr',
-  wis: 'SINLESS.Ability.Wis.abbr',
-  cha: 'SINLESS.Ability.Cha.abbr',
-};
