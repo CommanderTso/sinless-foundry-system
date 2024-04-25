@@ -28,8 +28,6 @@ export default class SinlessCharacter extends SinlessActorBase {
   prepareDerivedData() {
     // Loop through ability scores, and add their modifiers to our sheet output.
     for (const key in this.attributes) {
-      // Calculate the modifier using d20 rules.
-      this.attributes[key].mod = Math.floor((this.attributes[key].value - 10) / 2);
       // Handle ability label localization.
       this.attributes[key].label = game.i18n.localize(CONFIG.SINLESS.attributes[key]) ?? key;
     }
