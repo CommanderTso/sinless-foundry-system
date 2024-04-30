@@ -1,4 +1,4 @@
-import SinlessItemBase from "./item-base.mjs";
+import SinlessItemBase from "./item/item-base.mjs";
 
 export default class SinlessSpell extends SinlessItemBase {
 
