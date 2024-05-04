@@ -22,7 +22,8 @@
     },
     "SheetLabels": {
       "Actor": "Sinless Actor Sheet",
-      "Item": "Sinless Item Sheet"
+      "Item": "Sinless Item Sheet",
+      "Weapon": "Sinless Weapon Sheet"
     },
     "Item": {
       "Spell": {
