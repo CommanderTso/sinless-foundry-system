@@ -1,6 +1,6 @@
-import SinlessItemBase from "./item.mjs";
+import SinlessItem from "./item.mjs";
 
-export default class SinlessItem extends SinlessItemBase {
+export default class SinlessWeapon extends SinlessItem {
 
   static defineSchema() {
     // @ts-ignore
@@ -20,7 +20,7 @@ export default class SinlessItem extends SinlessItemBase {
       flavorText: new fields.StringField()
     });
     schema.cost = new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 });
-    schema.skills_allowed = new fields.ArrayField
+    schema.skills_allowed = new fields.ArrayField(fields.StringField(), {required: true, nullable: false})
 
 
     // schema.roll = new fields.SchemaField({
