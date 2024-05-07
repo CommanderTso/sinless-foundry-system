@@ -14,13 +14,13 @@ export default class SinlessWeapon extends SinlessItem {
     schema.conceal = new fields.NumberField({ ...requiredInteger, initial: 1, min: 1 });
     schema.damage = new fields.SchemaField({
       forceType: new fields.BooleanField({required: true, nullable: false, initial: false}),
-      forceDamage: new fields.String(),
-      amount: new fields.String({required: true, nullable: false}),
+      forceDamage: new fields.StringField({required: true, nullable: false}),
+      amount: new fields.StringField({required: true, nullable: false}),
       ap: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0}),
       flavorText: new fields.StringField()
     });
     schema.cost = new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 });
-    schema.skills_allowed = new fields.ArrayField(fields.StringField(), {required: true, nullable: false})
+    schema.skills_allowed = new fields.ArrayField(new fields.StringField(), {required: true, nullable: false})
 
 
     // schema.roll = new fields.SchemaField({

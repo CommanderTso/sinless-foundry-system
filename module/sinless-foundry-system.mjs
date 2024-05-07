@@ -4,6 +4,7 @@ import { SinlessItem } from './documents/item.mjs';
 // Import sheet classes.
 import { SinlessActorSheet } from './sheets/actor-sheet.mjs';
 import { SinlessItemSheet } from './sheets/item-sheet.mjs';
+import { SinlessWeaponSheet } from './sheets/weapon-sheet.mjs'
 // Import helper/utility classes and constants.
 import { preloadHandlebarsTemplates } from './helpers/templates.mjs';
 import { SINLESS } from './helpers/config.mjs';
@@ -69,7 +70,10 @@ Hooks.once('init', function () {
     makeDefault: true,
     label: 'SINLESS.SheetLabels.Item',
   });
-
+  Items.registerSheet('sinless-foundry-system', SinlessWeaponSheet, {
+    makeDefault: false,
+    label: 'SINLESS.SheetLabels.Item',
+  });
   // Preload Handlebars templates.
   return preloadHandlebarsTemplates();
 });
