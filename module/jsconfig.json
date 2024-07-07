@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "module": "ES6",
+    "target": "ES6"
+  },
+  "exclude": ["node_modules", "**/node_modules/*"],
+  "include": ["sinless-foundry-system.mjs", "foundry/**/*.js", "foundry/**/*.mjs","placeholder.ts"],
+  "typeAcquisition": {
+    "include": ["jquery"]
+  }
+}
