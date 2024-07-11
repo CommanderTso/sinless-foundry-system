@@ -21,3 +21,8 @@ SINLESS.abilityAbbreviations = {
   wis: 'SINLESS.Ability.Wis.abbr',
   cha: 'SINLESS.Ability.Cha.abbr',
 };
+
+SINLESS.actorData = {
+  physicalCondition: 'SINLESS.ActorData.PhysicalCondition',
+  stunCondition: 'SINLESS.ActorData.stunConditionCondition',
+}
