@@ -5,43 +5,6 @@
     <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
     <div class="header-fields">
       <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
-      {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
-      use both the "grid" and "grid-Ncol" class where "N" can be any number
-      from 1 to 12 and will create that number of columns.  --}}
-      <!--
-      <div class="resources grid grid-3col">
-
-        {{!-- "flex-group-center" is also defined in the _grid.scss file
-        and it will add a small amount of padding, a border, and will
-        center all of its child elements content and text. --}}
-        {{log this}}
-        <div class="resource flex-group-center">
-          <label for="system.physicalCondition.value" class="resource-label">{{localize 'SINLESS.ActorData.PhysicalCondition'}}</label>
-          <div class="resource-content flexrow flex-center flex-between">
-          <input type="text" name="system.physicalCondition.value" value="{{system.physicalCondition.value}}" data-dtype="Number"/>
-          <span> / </span>
-          <input type="text" name="system.physicalCondition.max" value="{{system.physicalCondition.max}}" data-dtype="Number"/>
-          </div>
-        </div>
-
-        <div class="resource flex-group-center">
-          <label for="system.stunCondition.value" class="resource-label">{{localize config.ActorData.StunCondition}}</label>
-          <div class="resource-content flexrow flex-center flex-between">
-          <input type="text" name="system.stunCondition.value" value="{{system.stunCondition.value}}" data-dtype="Number"/>
-          <span> / </span>
-          <input type="text" name="system.stunCondition.max" value="{{system.stunCondition.max}}" data-dtype="Number"/>
-          </div>
-        </div>
-
-        <div class="resource flex-group-center">
-          <label for="system.attributes.level.value" class="resource-label">Level</label>
-          <div class="resource-content flexrow flex-center flex-between">
-          <input type="text" name="system.attributes.level.value" value="{{system.attributes.level.value}}" data-dtype="Number"/>
-          </div>
-        </div>
-
-      </div>
-      -->
     </div>
   </header>
 
@@ -60,15 +23,31 @@
 
     {{!-- Owned Features Tab --}}
     <div class="tab features" data-group="primary" data-tab="features">
-      <div class="abilities flexcol">
-        {{#each system.abilities as |ability key|}}
-        <div class="ability flexrow flex-group-center">
-          <label for="system.abilities.{{key}}.value" class="resource-label rollable flexlarge align-left" data-roll="d20+@abilities.{{key}}.mod" data-label="{{localize (lookup @root.config.abilities key)}}">{{localize (lookup @root.config.abilities key)}}</label>
-          <input type="text" name="system.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number"/>
-          <span class="ability-mod rollable" data-roll="d20+@abilities.{{key}}.mod" data-label="{{localize (lookup @root.config.abilities key)}}">{{numberFormat ability.mod decimals=0 sign=true}}</span>
-        </div>
-        {{/each}}
+      <div class="ability flexrow flex-group-center">
+        <label for="system.attributes.strength.value" class="resource-label flexlarge align-left">{{localize 'SINLESS.Attributes.Strength'}}</label>
+        <input type="text" name="system.attributes.strength.value" value="{{system.attributes.strength.value}}" data-dtype="Number"/>
       </div>
+      <div class="ability flexrow flex-group-center">
+        <label for="system.attributes.body.value" class="resource-label flexlarge align-left">{{localize 'SINLESS.Attributes.Body'}}</label>
+        <input type="text" name="system.attributes.body.value" value="{{system.attributes.body.value}}" data-dtype="Number"/>
+      </div>
+      <div class="ability flexrow flex-group-center">
+        <label for="system.attributes.reaction.value" class="resource-label flexlarge align-left">{{localize 'SINLESS.Attributes.Reaction'}}</label>
+        <input type="text" name="system.attributes.reaction.value" value="{{system.attributes.reaction.value}}" data-dtype="Number"/>
+      </div>
+      <div class="ability flexrow flex-group-center">
+        <label for="system.attributes.intelligence.value" class="resource-label flexlarge align-left">{{localize 'SINLESS.Attributes.Intelligence'}}</label>
+        <input type="text" name="system.attributes.intelligence.value" value="{{system.attributes.intelligence.value}}" data-dtype="Number"/>
+      </div>
+      <div class="ability flexrow flex-group-center">
+        <label for="system.attributes.willpower.value" class="resource-label flexlarge align-left">{{localize 'SINLESS.Attributes.Willpower'}}</label>
+        <input type="text" name="system.attributes.willpower.value" value="{{system.attributes.willpower.value}}" data-dtype="Number"/>
+      </div>
+      <div class="ability flexrow flex-group-center">
+        <label for="system.attributes.charisma.value" class="resource-label flexlarge align-left">{{localize 'SINLESS.Attributes.Charisma'}}</label>
+        <input type="text" name="system.attributes.charisma.value" value="{{system.attributes.charisma.value}}" data-dtype="Number"/>
+      </div>
+    </div>
         
   </section>
 

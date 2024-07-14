@@ -4,6 +4,14 @@
       "PhysicalCondition": "Physical Condition",
       "StunCondition": "Stun Condition"
     },
+    "Attributes": {
+      "Strength": "Strength",
+      "Body": "Body",
+      "Reaction": "Reaction",
+      "Intelligence": "Intelligence",
+      "Willpower": "Willpower",
+      "Charisma": "Charisma"
+    },
     "Ability": {
       "Str": {
         "long": "Strength",

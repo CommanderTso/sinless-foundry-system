@@ -6,31 +6,195 @@
     ],
     "templates": {
       "base": {
-        "physicalCondition": {
-          "value": 10,
-          "min": 0,
-          "max": 20
-        },
-        "stunCondition": {
-          "value": 10,
-          "min": 0,
-          "max": 20
-        },
         "movement": {
           "value": 3
-        },
-        "heritage": "",
-        "magicalTalent": "",
-        "biography": ""
+        }
       }
     },
     "character": {
       "templates": [
         "base"
       ],
+      "heritage": "",
+      "magicalTalent": "",
+      "ghostRating": {
+        "min": 0
+      },
+      "brand": "",
+      "biography": "",
+      "etiquettes": {
+        "corporate": {
+          "value": 0,
+          "min": 0,
+          "max": 7
+        },
+        "street": {
+          "value": 0,
+          "min": 0,
+          "max": 7
+        },
+        "civic": {
+          "value": 0,
+          "min": 0,
+          "max": 7
+        },
+        "aristocracy": {
+          "value": 0,
+          "min": 0,
+          "max": 7
+        },
+        "military": {
+          "value": 0,
+          "min": 0,
+          "max": 7
+        },
+        "criminal": {
+          "value": 0,
+          "min": 0,
+          "max": 7
+        },
+        "wasteland": {
+          "value": 0,
+          "min": 0,
+          "max": 7
+        }
+      },
+      "kismet": {
+        "earned": 0,
+        "current": 0
+      },
+      "skills": {
+        "brawn": {
+          "athletics": {
+            "value": 0,
+            "min": 0,
+            "max": 7
+          },
+          "cyber_combat": {
+            "value": 0,
+            "min": 0,
+            "max": 7
+          },
+          "martial_arts": {
+            "value": 0,
+            "min": 0,
+            "max": 7
+          },
+          "melee_weapons": {
+            "value": 0,
+            "min": 0,
+            "max": 7
+          },
+          "throwing_weapons": {
+            "value": 0,
+            "min": 0,
+            "max": 7
+          },
+          "unarmed_combat": {
+            "value": 0,
+            "min": 0,
+            "max": 7
+          }
+        },
+        "resolve": {
+          "astral_senses": {
+            "value": 0,
+            "min": 0,
+            "max": 7
+          },
+          "channeling": {
+            "value": 0,
+            "min": 0,
+            "max": 7
+          },
+          "coercion": {
+            "value": 0,
+            "min": 0,
+            "max": 7
+          },
+          "conjuring": {
+            "value": 0,
+            "min": 0,
+            "max": 7
+          },
+          "fascination": {
+            "value": 0,
+            "min": 0,
+            "max": 7
+          },
+          "leadership": {
+            "value": 0,
+            "min": 0,
+            "max": 7
+          },
+          "sorcery": {
+            "value": 0,
+            "min": 0,
+            "max": 7
+          },
+          "subterfuge": {
+            "value": 0,
+            "min": 0,
+            "max": 7
+          },
+          "survival": {
+            "value": 0,
+            "min": 0,
+            "max": 7
+          }
+        },
+        "finesse": {
+          "archery": {
+            "value": 0,
+            "min": 0,
+            "max": 7
+          },
+          "articulated_mnvs": {
+            "value": 0,
+            "min": 0,
+            "max": 7
+          },
+          "energy_weapons": {
+            "value": 0,
+            "min": 0,
+            "max": 7
+          },
+          "firearms": {
+            "value": 0,
+            "min": 0,
+            "max": 7
+          },
+          "gunnery": {
+            "value": 0,
+            "min": 0,
+            "max": 7
+          },
+          "heavy_weapons": {
+            "value": 0,
+            "min": 0,
+            "max": 7
+          }
+        },
+        "focus": {}
+      },
       "attributes": {
-        "level": {
-          "value": 1
+        "strength": {
+          "value": 5
+        },
+        "body": {
+          "value": 6
+        },
+        "reaction": {
+          "value": 7
+        },
+        "intelligence": {
+          "value": 8
+        },
+        "willpower": {
+          "value": 8
+        },
+        "charisma": {
+          "value": 9
         }
       },
       "abilities": {
