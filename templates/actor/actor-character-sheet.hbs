@@ -22,33 +22,14 @@
   <section class="sheet-body">
 
     {{!-- Owned Features Tab --}}
-    <div class="tab features" data-group="primary" data-tab="features">
+    <div class="abilities flexcol">
+      {{#each system.attributes as |attribute key|}}
       <div class="ability flexrow flex-group-center">
-        <label for="system.attributes.strength.value" class="resource-label flexlarge align-left">{{localize 'SINLESS.Attributes.Strength'}}</label>
-        <input type="text" name="system.attributes.strength.value" value="{{system.attributes.strength.value}}" data-dtype="Number"/>
+        <label for="system.attributes.{{key}}.value" class="resource-label rollable flexlarge align-left">{{localize (lookup @root.config.attributes key)}}</label>
+        <input type="text" name="system.attributes.{{key}}.value" value="{{attribute.value}}" data-dtype="Number"/>
       </div>
-      <div class="ability flexrow flex-group-center">
-        <label for="system.attributes.body.value" class="resource-label flexlarge align-left">{{localize 'SINLESS.Attributes.Body'}}</label>
-        <input type="text" name="system.attributes.body.value" value="{{system.attributes.body.value}}" data-dtype="Number"/>
-      </div>
-      <div class="ability flexrow flex-group-center">
-        <label for="system.attributes.reaction.value" class="resource-label flexlarge align-left">{{localize 'SINLESS.Attributes.Reaction'}}</label>
-        <input type="text" name="system.attributes.reaction.value" value="{{system.attributes.reaction.value}}" data-dtype="Number"/>
-      </div>
-      <div class="ability flexrow flex-group-center">
-        <label for="system.attributes.intelligence.value" class="resource-label flexlarge align-left">{{localize 'SINLESS.Attributes.Intelligence'}}</label>
-        <input type="text" name="system.attributes.intelligence.value" value="{{system.attributes.intelligence.value}}" data-dtype="Number"/>
-      </div>
-      <div class="ability flexrow flex-group-center">
-        <label for="system.attributes.willpower.value" class="resource-label flexlarge align-left">{{localize 'SINLESS.Attributes.Willpower'}}</label>
-        <input type="text" name="system.attributes.willpower.value" value="{{system.attributes.willpower.value}}" data-dtype="Number"/>
-      </div>
-      <div class="ability flexrow flex-group-center">
-        <label for="system.attributes.charisma.value" class="resource-label flexlarge align-left">{{localize 'SINLESS.Attributes.Charisma'}}</label>
-        <input type="text" name="system.attributes.charisma.value" value="{{system.attributes.charisma.value}}" data-dtype="Number"/>
-      </div>
+      {{/each}}
     </div>
-        
   </section>
 
       </section>
