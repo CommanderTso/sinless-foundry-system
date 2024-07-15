@@ -2,15 +2,15 @@
   "SINLESS": {
     "ActorData": {
       "PhysicalCondition": "Physical Condition",
-      "StunCondition": "Stun Condition"
-    },
-    "Attributes": {
-      "Strength": "Strength",
-      "Body": "Body",
-      "Reaction": "Reaction",
-      "Intelligence": "Intelligence",
-      "Willpower": "Willpower",
-      "Charisma": "Charisma"
+      "StunCondition": "Stun Condition",
+      "Attributes": {
+        "Strength": "Strength",
+        "Body": "Body",
+        "Reaction": "Reaction",
+        "Intelligence": "Intelligence",
+        "Willpower": "Willpower",
+        "Charisma": "Charisma"
+      }
     },
     "SheetLabels": {
       "Actor": "Sinless Actor Sheet",

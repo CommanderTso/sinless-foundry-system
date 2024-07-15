@@ -6,12 +6,12 @@ export const SINLESS = {};
  */
 
 SINLESS.attributes = {
-  strength:     'SINLESS.Attributes.Strength',
-  body:         'SINLESS.Attributes.Body',
-  reaction:     'SINLESS.Attributes.Reaction',
-  intelligence: 'SINLESS.Attributes.Intelligence',
-  willpower:    'SINLESS.Attributes.Willpower',
-  charisma:     'SINLESS.Attributes.Charisma',
+  strength:     'SINLESS.ActorData.Attributes.Strength',
+  body:         'SINLESS.ActorData.Attributes.Body',
+  reaction:     'SINLESS.ActorData.Attributes.Reaction',
+  intelligence: 'SINLESS.ActorData.Attributes.Intelligence',
+  willpower:    'SINLESS.ActorData.Attributes.Willpower',
+  charisma:     'SINLESS.ActorData.Attributes.Charisma',
 };
 
 SINLESS.round = (x) => {
@@ -22,5 +22,4 @@ SINLESS.round = (x) => {
   } else {
     throw new Error("Tried to round something that was not a number.")
   }
-
 }
