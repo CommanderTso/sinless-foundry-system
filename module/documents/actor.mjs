@@ -2,6 +2,9 @@
  * Extend the base Actor document by defining a custom roll data structure which is ideal for the Simple system.
  * @extends {Actor}
  */
+
+import { SINLESS } from '../helpers/config.mjs';
+
 export class SinlessActor extends Actor {
   /** @override */
   prepareData() {
@@ -46,6 +49,9 @@ export class SinlessActor extends Actor {
 
     // Make modifications to data here. For example:
     const systemData = actorData.system;
+    console.log(systemData)
+
+    systemData.physicalCondition = 6 + SINLESS.round(systemData.attributes.body.value / 2)
 
     // Loop through ability scores, and add their modifiers to our sheet output.
     // for (let [key, ability] of Object.entries(systemData.abilities)) {
