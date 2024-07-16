@@ -22,6 +22,15 @@
       },
       "brand": "",
       "biography": "",
+      "charismaPoolSelection": {
+        "choices": {
+          "a": "brawn",
+          "b": "finesse",
+          "c": "resolve",
+          "d": "focus"
+        },
+        "selected": "a"
+      },
       "etiquettes": {
         "corporate": {
           "value": 0,

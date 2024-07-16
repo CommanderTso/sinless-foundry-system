@@ -31,9 +31,26 @@
       </div>
       {{/each}}
 
+      <div>
+        {{log system}}
+        <label for="system.charismaPoolSelection.selected">Apply Charisma to which pool: </label>
+        <select name="system.charismaPoolSelection.selected">
+          {{selectOptions system.charismaPoolSelection.choices selected=system.charismaPoolSelection.selected localize=true}}
+        </select>
+      </div>
+
       <p></p>
 
       {{!-- Secondary Stats --}}
+      {{#each system.pools as |value key|}}
+      <div class="ability flexrow flex-group-center">
+        <label for="system.pool.{{key}}" class="resource-label rollable flexlarge align-left">{{localize (lookup @root.config.pools key)}}</label>
+        <input type="text" name="system.pool.{{key}}" value="{{value}}" data-dtype="Number"/>
+      </div>
+      {{/each}}
+
+      <p></p>
+
       <div class="ability flexrow flex-group-center">
         <label for="system.physicalCondition" class="resource-label flexlarge align-left">{{localize 'SINLESS.ActorData.PhysicalCondition'}}</label>
         <div name="system.physicalCondition">{{system.physicalCondition}}</div>

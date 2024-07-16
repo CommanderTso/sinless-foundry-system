@@ -10,6 +10,12 @@
         "Intelligence": "Intelligence",
         "Willpower": "Willpower",
         "Charisma": "Charisma"
+      },
+      "Pools": {
+        "Brawn": "Brawn",
+        "Finesse": "Finesse",
+        "Resolve": "Resolve",
+        "Focus": "Focus"
       }
     },
     "SheetLabels": {

@@ -18,6 +18,7 @@ export class SinlessActor extends Actor {
   prepareBaseData() {
     // Data modifications in this step occur before processing embedded
     // documents or derived data.
+
   }
 
   /**
@@ -46,15 +47,22 @@ export class SinlessActor extends Actor {
   _prepareCharacterData(actorData) {
     if (actorData.type !== 'character') return;
 
-    // Make modifications to data here. For example:
     const systemData = actorData.system;
 
-    systemData.physicalCondition = 6 + sinlessRound(systemData.attributes.body.value / 2)
-    systemData.stunCondition = 6 + sinlessRound(systemData.attributes.willpower.value / 2)
+    systemData.pools = {}
+
     systemData.pools.brawn = systemData.attributes.strength.value + sinlessRound(systemData.attributes.willpower.value / 4) + sinlessRound(systemData.attributes.body.value / 2)
     systemData.pools.finesse = systemData.attributes.reaction.value + sinlessRound(systemData.attributes.body.value / 2)
     systemData.pools.resolve = systemData.attributes.willpower.value + sinlessRound(systemData.attributes.charisma.value / 2) + sinlessRound(systemData.attributes.intelligence.value / 2)
     systemData.pools.focus = systemData.attributes.intelligence.value + sinlessRound(systemData.attributes.willpower.value / 4) + sinlessRound(systemData.attributes.reaction.value / 2)
+
+    // half the charisma attribute gets added to a pool of your choice
+    // apply the selection made on the character sheet
+    let choiceString = systemData.charismaPoolSelection.choices[systemData.charismaPoolSelection.selected]
+    systemData.pools[choiceString] += sinlessRound(systemData.attributes.charisma.value / 4)
+
+    systemData.physicalCondition = 6 + sinlessRound(systemData.attributes.body.value / 2)
+    systemData.stunCondition = 6 + sinlessRound(systemData.attributes.willpower.value / 2)
 
     // Loop through ability scores, and add their modifiers to our sheet output.
     // for (let [key, ability] of Object.entries(systemData.abilities)) {

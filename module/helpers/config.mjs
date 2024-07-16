@@ -13,3 +13,10 @@ SINLESS.attributes = {
   willpower:    'SINLESS.ActorData.Attributes.Willpower',
   charisma:     'SINLESS.ActorData.Attributes.Charisma',
 };
+
+SINLESS.pools = {
+  brawn:   "Brawn",
+  finesse: "Finesse",
+  resolve: "Resolve",
+  focus:   "Focus"
+}
