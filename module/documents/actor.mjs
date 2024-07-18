@@ -1,9 +1,9 @@
+import { sinlessRound } from '../helpers/sinless_helpers.mjs';
+
 /**
  * Extend the base Actor document by defining a custom roll data structure which is ideal for the Simple system.
  * @extends {Actor}
  */
-import { sinlessRound } from '../helpers/sinless_helpers.mjs';
-
 export class SinlessActor extends Actor {
   /** @override */
   prepareData() {
