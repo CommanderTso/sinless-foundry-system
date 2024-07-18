@@ -52,7 +52,7 @@ export class SinlessActor extends Actor {
     systemData.pools = {}
 
     systemData.pools.brawn = systemData.attributes.strength.value + sinlessRound(systemData.attributes.willpower.value / 4) + sinlessRound(systemData.attributes.body.value / 2)
-    systemData.pools.finesse = systemData.attributes.reaction.value + sinlessRound(systemData.attributes.body.value / 2)
+    systemData.pools.finesse = systemData.attributes.reaction.value + sinlessRound(systemData.attributes.body.value / 2) + sinlessRound(systemData.attributes.intelligence.value / 4)
     systemData.pools.resolve = systemData.attributes.willpower.value + sinlessRound(systemData.attributes.charisma.value / 2) + sinlessRound(systemData.attributes.intelligence.value / 2)
     systemData.pools.focus = systemData.attributes.intelligence.value + sinlessRound(systemData.attributes.willpower.value / 4) + sinlessRound(systemData.attributes.reaction.value / 2)
 
