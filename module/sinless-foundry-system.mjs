@@ -7,6 +7,7 @@ import { SinlessItemSheet } from './sheets/item-sheet.mjs';
 // Import helper/utility classes and constants.
 import { preloadHandlebarsTemplates } from './helpers/templates.mjs';
 import { SINLESS } from './helpers/config.mjs';
+import { registerExampleTests } from './tests/tests.mjs'
 
 /* -------------------------------------------- */
 /*  Init Hook                                   */
@@ -20,6 +21,12 @@ Hooks.once('init', function () {
     SinlessItem,
     rollItemMacro,
   };
+
+  Hooks.on('quenchReady', (quench) => {
+    registerExampleTests(quench);
+    console.log("quenchReady hook run!")
+  })
+
 
   // Add custom constants for configuration.
   CONFIG.SINLESS = SINLESS;
