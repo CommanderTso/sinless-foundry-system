@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "qassimfarid.ejs-language-support",
+    "formulahendry.auto-close-tag",
+    "eamodio.gitlens",
+    "andrejunges.handlebars",
+    "ecmel.vscode-html-css",
+    "zainchen.json",
+    "esbenp.prettier-vscode",
+    "rvest.vs-code-prettier-eslint"
+  ]
+}
