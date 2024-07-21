@@ -12,5 +12,5 @@ export const preloadHandlebarsTemplates = async function () {
     'systems/sinless-foundry-system/templates/actor/parts/actor-effects.hbs',
     // Item partials
     'systems/sinless-foundry-system/templates/item/parts/item-effects.hbs',
-  ]);
-};
+  ])
+}

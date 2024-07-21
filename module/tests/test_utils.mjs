@@ -1,4 +1,4 @@
-import { SinlessActor } from "../documents/actor.mjs";
+import { SinlessActor } from '../documents/actor.mjs'
 
 /**
  * Options affecting the creation of test actors
@@ -16,8 +16,8 @@ import { SinlessActor } from "../documents/actor.mjs";
 export const createTestActor = async (data = {}, options = {}) => {
   const createData = foundry.utils.mergeObject(
     {
-      name: "Sinless Test Character",
-      type: "character",
+      name: 'Sinless Test Character',
+      type: 'character',
       system: {
         attributes: {
           strength: { value: 11 },
@@ -28,23 +28,23 @@ export const createTestActor = async (data = {}, options = {}) => {
           charisma: { value: 19 },
         },
         charismaPoolSelection: {
-            selected: "b"
-        }
+          selected: 'b',
+        },
       },
     },
-    data
-  );
-//   const { temporary = false, prepareData = true } = options;
+    data,
+  )
+  //   const { temporary = false, prepareData = true } = options;
   /** @type {SinlessActor} */
-  const actor = await SinlessActor.create(createData);
-//   if (temporary && prepareData) actor.reset();
-  return actor;
-};
+  const actor = await SinlessActor.create(createData)
+  //   if (temporary && prepareData) actor.reset();
+  return actor
+}
 
 // brawn is full strength + half body + fourth willpower
 // brawn: 11 + 6 + 4 = 21
 
-// finesse is half body + full reaction + quarter intelligence + 
+// finesse is half body + full reaction + quarter intelligence +
 // finesse: 6 + 13 + 3 = 22 + charisma bonus = 26
 
 // focus is half reaction + full intelligence + fourth willpower
