@@ -1,10 +1,18 @@
-<form class="{{cssClass}} {{actor.type}} flexcol" autocomplete="off">
-
+<form class="{{ cssClass }} {{ actor.type }} flexcol" autocomplete="off">
   {{!-- Sheet Header --}}
   <header class="sheet-header">
-    <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
+    <img
+      class="profile-img"
+      src="{{ actor.img }}"
+      data-edit="img"
+      title="{{ actor.name }}"
+      height="100"
+      width="100"
+    />
     <div class="header-fields">
-      <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
+      <h1 class="charname">
+        <input name="name" type="text" value="{{ actor.name }}" placeholder="Name" />
+      </h1>
     </div>
   </header>
 
@@ -20,19 +28,26 @@
 
   {{!-- Sheet Body --}}
   <section class="sheet-body">
-
     {{!-- Owned Features Tab --}}
     <div class="abilities flexcol">
       {{!-- Attributes --}}
       {{#each system.attributes as |attribute key|}}
       <div class="ability flexrow flex-group-center">
-        <label for="system.attributes.{{key}}.value" class="resource-label rollable flexlarge align-left">{{localize (lookup @root.config.attributes key)}}</label>
-        <input type="text" name="system.attributes.{{key}}.value" value="{{attribute.value}}" data-dtype="Number"/>
+        <label
+          for="system.attributes.{{ key }}.value"
+          class="resource-label rollable flexlarge align-left"
+          >{{localize (lookup @root.config.attributes key)}}</label
+        >
+        <input
+          type="text"
+          name="system.attributes.{{ key }}.value"
+          value="{{ attribute.value }}"
+          data-dtype="Number"
+        />
       </div>
       {{/each}}
 
       <div>
-        {{log system}}
         <label for="system.charismaPoolSelection.selected">Apply Charisma to which pool: </label>
         <select name="system.charismaPoolSelection.selected">
           {{selectOptions system.charismaPoolSelection.choices selected=system.charismaPoolSelection.selected localize=true}}
@@ -44,16 +59,27 @@
       {{!-- Secondary Stats --}}
       {{#each system.pools as |value key|}}
       <div class="ability flexrow flex-group-center">
-        <label for="system.pool.{{key}}" class="resource-label rollable flexlarge align-left">{{localize (lookup @root.config.pools key)}}</label>
-        <input type="text" name="system.pool.{{key}}" value="{{value}}" data-dtype="Number"/>
+        <label
+          for="system.pool.{{ key }}"
+          class="resource-label rollable flexlarge align-left"
+          data-roll="4d20"
+          data-label="{{localize (lookup @root.config.pools key)}}"
+        >
+          {{localize (lookup @root.config.pools key)}}</label
+        >
+        <input type="text" name="system.pool.{{ key }}" value="{{ value }}" data-dtype="Number" />
       </div>
       {{/each}}
 
       <p></p>
 
       <div class="ability flexrow flex-group-center">
-        <label for="system.physicalCondition" class="resource-label flexlarge align-left">{{localize 'SINLESS.ActorData.PhysicalCondition'}}</label>
-        <div name="system.physicalCondition">{{system.physicalCondition}}</div>
+        <label
+          for="system.physicalCondition"
+          class="resource-label flexlarge align-left"
+          >{{localize 'SINLESS.ActorData.PhysicalCondition'}}</label
+        >
+        <div name="system.physicalCondition">{{ system.physicalCondition }}</div>
       </div>
     </div>
 
@@ -65,7 +91,7 @@
 
     {{!-- Owned Items Tab --}}
     <div class="tab items" data-group="primary" data-tab="items">
-       {{> "systems/sinless-foundry-system/templates/actor/parts/actor-items.hbs"}}
+      {{> "systems/sinless-foundry-system/templates/actor/parts/actor-items.hbs"}}
     </div>
 
     {{!-- Owned Spells Tab --}}
@@ -77,6 +103,5 @@
     <div class="tab effects flexcol" data-group="primary" data-tab="effects">
       {{> "systems/sinless-foundry-system/templates/actor/parts/actor-effects.hbs"}}
     </div>
-
   </section>
 </form>
