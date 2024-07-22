@@ -62,7 +62,7 @@
         <label
           for="system.pool.{{ key }}"
           class="resource-label rollable flexlarge align-left"
-          data-roll="4d20"
+          data-roll="{{ value }}d6cs>=4"
           data-label="{{localize (lookup @root.config.pools key)}}"
         >
           {{localize (lookup @root.config.pools key)}}</label
