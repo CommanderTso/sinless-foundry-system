@@ -175,6 +175,9 @@ export class SinlessActorSheet extends ActorSheet {
       onManageActiveEffect(ev, document)
     })
 
+    // Create roll dialog for pools
+    html.on('click', '.rollable-dialog', this._onRollDialog.bind(this))
+
     // Rollable abilities.
     html.on('click', '.rollable', this._onRoll.bind(this))
 
@@ -246,5 +249,35 @@ export class SinlessActorSheet extends ActorSheet {
       })
       return roll
     }
+  }
+
+  /**
+   * Handle creating a dice pool roll dialog
+   */
+  async _onRollDialog(event) {
+    console.log('Ran _onRollDialog')
+    event.preventDefault()
+
+    const htmlContent = await renderTemplate(
+      'systems/sinless-foundry-system//templates/dialogs/pool-roll-dialog.hbs',
+    )
+
+    return new Promise((resolve, reject) => {
+      const dialog = new Dialog({
+        title: 'Roll Pool',
+        content: htmlContent,
+        buttons: {
+          cancel: {
+            label: 'Cancel',
+            callback: () => reject('User cancelled.'),
+          },
+        },
+        close: () => {
+          reject('User closed dialog.')
+        },
+      })
+
+      dialog.render(true)
+    })
   }
 }
