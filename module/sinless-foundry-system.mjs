@@ -24,7 +24,6 @@ Hooks.once('init', function () {
 
   Hooks.on('quenchReady', (quench) => {
     registerExampleTests(quench)
-    console.log('quenchReady hook run!')
   })
 
   // Add custom constants for configuration.
